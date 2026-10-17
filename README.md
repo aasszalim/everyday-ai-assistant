@@ -1,23 +1,23 @@
-# Everyday AI
+# Everyday AI Cyber Safety
 
-A small writing studio for drafting, refining, translating, and summarizing text. Runs as a static page; no account or server required.
+A small, browser-based companion for defensive cybersecurity guidance. Get help with account recovery, suspicious messages, compromised accounts, device hardening, and everyday security questions.
 
 ## Try it
 
-Open [index.html](./index.html) in a browser, or enable GitHub Pages in **Settings → Pages** and publish from the `main` branch, `/ (root)`.
+[Open the live app](https://aasszalim.github.io/everyday-ai-assistant/) or open `index.html` directly in a browser.
 
-## Connect an AI provider
+## Connect a provider
 
-1. Select **API settings**.
-2. Enter an OpenAI-compatible API endpoint, a model name, and your API key. For OpenAI, the endpoint is `https://api.openai.com/v1`.
-3. Save for this session, write a brief or paste text, choose Draft, Refine, Translate, or Summarize, then select **Generate**.
+1. Open **API settings** and choose Google Gemini, Anthropic Claude, or OpenAI-compatible / other.
+2. Enter the provider's API endpoint, model ID, and your own API key. The app suggests a default endpoint for each provider.
+3. Save settings for this browser tab session, choose a cybersecurity topic, describe the situation without secrets, and select the action button.
 
-The browser sends requests directly to the provider. The API key is stored in this tab's `sessionStorage` only and is cleared when the tab session ends. Your provider may charge for API usage. The endpoint must allow browser requests (CORS). Do not enter a private key on a shared device or share a browser session containing your key.
+Custom providers must use the OpenAI Chat Completions format. Requests go directly from your browser to the selected provider, so the endpoint must allow browser requests (CORS). The provider may charge for API use. API keys are kept in this tab's `sessionStorage`; use the **Forget** button to remove saved settings.
 
-## Privacy
+## Safety and privacy
 
-Text is not saved by this app or sent anywhere except the AI endpoint you configure. Review that provider's data policy before sending sensitive content. AI output can be inaccurate; check it before relying on it.
+Never paste passwords, one-time codes, recovery codes, private keys, session cookies, or payment details. For password/account recovery, the app gives guidance for official provider recovery flows; it does not retrieve passwords or bypass authentication. For suspicious messages, defang URLs and remove personal details before pasting. The app does not save your descriptions, but sends them to the AI provider you configured. Check that provider's data policy and verify recovery instructions on its official website.
 
 ## Development
 
-This is a dependency-free static HTML app. Edit `index.html` and reload it in a browser to test changes. No build step is required.
+This is a dependency-free static HTML app. Edit `index.html` and reload it in a browser. No build step is required.
